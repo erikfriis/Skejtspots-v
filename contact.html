@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKEJTSPOTS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+    <script src="https://kit.fontawesome.com/658461545b.js" crossorigin="anonymous"></script>
+</head>
+<body id="bodyTwo">
+
+<!-- Top navbar -->
+
+  <div class="nav-container hide-nav" id="navBarTop">
+    <div class="wrapper">
+        <nav >
+            <img src="/img/logo-small-2.png" alt="skejtspots logotype">
+
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="search.html">SEARCH</a></li>
+                <li><a href="contact.html" class="focus-indicator" id="zoom">CONTACT US</a></li>
+            </ul>
+           </nav> 
+    </div>
+  </div>
+
+<!-- button for samll screen toggle menu-->
+
+  <div class="navbar-button-1" id="navBarButton">
+    <span class="icon">
+        <span class="icon-components">
+            
+        </span>
+    </span>
+</div>
+
+<!-- toggle dropdown menu for small screens -->
+
+<div class="sidebar">
+    <div class="nav-links" id="navLinks">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="search.html">SEARCH</a></li>
+        <li><a href="contact.html" class="focus-indicator-dropdown" >CONTACT US</a></li>
+      </ul>
+    </div>
+</div>
+
+<!-- form for submiting skatespots -->
+
+<div class="form" id="formId">
+    <form action="">
+        <div class="messages-icon">
+          <i class="fa-solid fa-compass"></i>
+            <span>Submit your favorite spots!</span>
+        </div>
+        <div class="input-field">
+            <i class="fa-regular fa-user"></i>
+            <input class="input" type="text" placeholder="Name" name="Name">
+        </div>
+
+        <div class="input-field">
+            <i class="fa-solid fa-mobile-screen"></i>
+            <input class="input" type="text" placeholder="Phoone.No" name="Phone">
+        </div>
+
+        <div class="input-field">
+            <i class="fa-regular fa-envelope"></i>
+            <input class="input" type="text" placeholder="Email Adress" name="Email">
+        </div>
+        <div class="input-field textarea">
+          <i class="fa-regular fa-image"></i>
+          <label for="file-upload" class="upload-button"></label>
+          <input type="file" name="spot" accept="image/png, image.jpeg">
+          <div class="file-button">Upload file</div>
+      </div>
+        <div class="input-field textarea">
+            <i class="fa-regular fa-comment"></i>
+            <textarea name="Message" placeholder="Submit your favorite spots here.." rows="20"></textarea>
+        </div>
+        <input class="submit-input" type="submit" value="submit" class="send-btn">
+    </form>
+</div>
+<script src="main.js"></script>
+</body>

@@ -1,0 +1,534 @@
+@font-face {
+  font-family: IrishGrover;
+  src: url(fomts/IrishGrover.ttf);
+}
+
+@import "animate.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f2ea23;
+}
+
+html {
+  font-size: 16px;
+  overflow: scroll;
+  font-family: IrishGrover;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Navbar */
+
+.nav-container {
+  background-color: black;
+  color: white;
+  height: 51px;
+  z-index: 2;
+}
+
+.wrapper {
+  max-width: 98%;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 51px;
+}
+
+nav img {
+  width: 100px;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-right: 25px;
+  overflow: visible;
+  transition: 0.1s ease-in-out;
+  padding: 0 0.1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 0 0.3rem;
+  scale: 1;
+  transition: 0.1s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #479f54;
+}
+
+nav ul li:hover {
+  scale: 1.1;
+}
+
+.flipClass {
+  animation: flipOutX;
+  animation-duration: 0.1s;
+}
+
+.zoomClass {
+  animation: zoomIn;
+  animation-duration: 0.1s;
+}
+
+.focus-indicator {
+  color: #479f54;
+  scale: 1.1;
+  /* text-align: center; */
+  /* font-size: 18px; */
+}
+
+/* button for navbar toggle */
+
+.navbar-button-1 {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0.5rem;
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  z-index: 200;
+}
+
+.buttonHide {
+  right: 30px;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0.5rem;
+  display: none;
+  position: absolute;
+  top: 10px;
+  display: none;
+  z-index: 3;
+  transition: 3s ease-out;
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1rem;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-components {
+  width: 1.5rem;
+  height: 0.1428571429rem;
+  background-color: #479f54;
+  border-radius: 4px;
+  position: absolute;
+  display: block;
+  top: 50%;
+  margin-top: -0.0714285714rem;
+  overflow-x: visible;
+}
+
+.icon-components::before {
+  content: "";
+  width: 1.5rem;
+  height: 0.1428571429rem;
+  position: absolute;
+  display: block;
+  top: -0.3571428571rem;
+  background-color: #479f54;
+  border-radius: 4px;
+}
+.icon-components::after {
+  bottom: -0.3571428571rem;
+  content: "";
+  display: block;
+  width: 1.5rem;
+  height: 0.1428571429rem;
+  background-color: #479f54;
+  border-radius: 4px;
+  position: absolute;
+}
+
+.animatenav {
+  animation: flipInX;
+  animation-duration: 0.4s;
+}
+
+/* toggle drop down menu */
+
+.nav-links {
+  font-size: 15px;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  top: -100vh;
+  text-align: left;
+  z-index: 2;
+  transition: all 1s ease-in-out;
+  border-radius: 5px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.dropDownToggle {
+  top: 0;
+  opacity: 1;
+  animation: fadeInDownBig;
+  animation-duration: 0.3s;
+}
+
+.stopscroll {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.nav-links ul {
+  display: flex;
+  flex-direction: column;
+  padding: 35px;
+  margin-top: 16rem;
+  overflow: hidden;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: block;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 50%;
+  margin: 0.8rem 0;
+  text-align: center;
+}
+
+.nav-links ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  padding: 0.5rem 0;
+  display: block;
+  width: 100%;
+  transition: 0.1s ease-in-out;
+}
+
+.nav-links ul li a:hover {
+  color: #479f54;
+  scale: 1.1;
+}
+
+.focus-indicator-dropdown {
+  color: #479f54 !important;
+  font-size: 22px !important;
+}
+
+/* Header content */
+
+.header-container {
+  color: black;
+}
+
+.wrapper-2 {
+  margin: 0 auto;
+}
+
+.intro-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: auto;
+}
+
+.img-main-logo {
+  object-fit: cover;
+  width: 100%;
+}
+
+.div-main-logo {
+  width: 480px;
+  max-width: 85%;
+  margin: 4rem 0 2rem 0;
+}
+
+.intro-container p {
+  font-size: 30px;
+  font-family: IrishGrover;
+  text-align: center;
+  width: 490px;
+  max-width: 85%;
+  margin: 0 0 1rem 0;
+}
+
+.intro-container ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  margin: 0.7rem auto 0.7rem auto;
+  overflow: visible;
+}
+
+.intro-container ul li {
+  color: white;
+  border: double #479f54 3px;
+  padding: 6px 25px 6px 25px;
+  background-color: black;
+  border-radius: 50%;
+  font-size: 14px;
+  display: flex;
+  transition: 0.05s ease-in;
+}
+
+.intro-container ul li:hover {
+  scale: 1.1;
+}
+
+.fa-brands .fa-regular {
+  font-size: 20px;
+}
+
+.header-line {
+  object-fit: cover;
+  width: 100%;
+}
+
+.div-line {
+  width: 520px;
+  max-width: 87%;
+}
+
+/* Main content -cards - areas*/
+
+.card a {
+  display: flex;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: auto;
+  overflow: auto;
+}
+
+.card img {
+  object-fit: cover;
+  width: 100%;
+  border: solid 2px black;
+  border: 4px double rgba(0, 0, 0, 0.3);
+  transition: 0.2s;
+}
+
+.card img:hover {
+  background-color: rgba(72, 72, 72, 0.2);
+}
+
+.card-1 {
+  margin-top: 0.5rem;
+}
+
+.card {
+  width: 480px;
+  max-width: 84%;
+  transition: 0.5s;
+  margin: 0.5rem auto;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: 700ms ease-in-out transform, 700ms ease-in-out opacity, 0.2s scale;
+}
+
+.card:hover {
+  scale: 1.01;
+}
+
+.show_content {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* site footer */
+
+.site-footer {
+  background-color: black;
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1)); */
+  padding: 45px 0 20px;
+  font-size: 15px;
+  line-height: 24px;
+  color: #969494;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.about {
+  margin-bottom: 0.5rem;
+}
+
+.site-footer hr {
+  border-top-color: #bbb;
+  opacity: 0.5;
+}
+
+.site-footer h6 {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 5px;
+  letter-spacing: 2px;
+}
+.site-footer a {
+  color: #737373;
+}
+.site-footer a:hover {
+  color: #479f54;
+  text-decoration: none;
+}
+.footer-links {
+  list-style: none;
+}
+.footer-links li {
+  display: block;
+}
+.footer-links a {
+  color: #737373;
+}
+
+.footer-links a:hover {
+  color: #479f54;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 538px) {
+  .intro-container p {
+    font-size: 27px;
+  }
+  .intro-container ul li {
+    font-size: 13px;
+  }
+}
+
+/* cards for skatespots */
+
+.spots-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  width: 85%;
+}
+
+.spot-padding {
+  padding: 2%;
+  width: 25%;
+}
+
+.spot-card {
+  background-color: #f3f4ec;
+  border: 3px double black;
+  transition: 0.2s ease-in-out;
+}
+
+.show_cards {
+  opacity: 1;
+}
+
+.spot-card:hover {
+  scale: 1.03;
+}
+
+.spot-text p {
+  margin-left: 0.4rem;
+  margin: 0.3rem 0.4rem;
+  width: 100%;
+  font-size: 14px;
+}
+
+.spot-card-img img {
+  width: 100%;
+}
+
+.spot-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.spot-text img {
+  object-fit: cover;
+  margin-right: 1.1rem;
+}
+
+/* smaller screens */
+
+@media screen and (max-width: 1235px) {
+  .spot-padding {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .spot-padding {
+    width: 45%;
+  }
+  .spot-text p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 631px) {
+  .spot-padding {
+    width: 80%;
+  }
+  .spot-text p {
+    font-size: 16px;
+  }
+
+  .hide-nav ul li {
+    display: none;
+  }
+
+  .navbar-button-1 {
+    display: inline-block;
+  }
+
+  .navbar-button-1 {
+    display: inline-block;
+  }
+
+  .buttonHide {
+    display: inline-block;
+  }
+
+  .div-main-logo {
+    display: none;
+  }
+
+  .intro-container p {
+    margin-top: 3rem;
+  }
+}
